@@ -5,6 +5,7 @@ Pod::Spec.new do |s|
   s.summary      = "iPhone machine 即时更新"
 
   s.description  = <<-DESC
+                    现有的更新不及时，这个及时更新
                    DESC
 
   s.homepage     = "https://github.com/zhfeng20108/ZFiOSVersion"
