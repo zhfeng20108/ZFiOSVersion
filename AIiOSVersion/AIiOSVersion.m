@@ -1,13 +1,12 @@
 //
-//  ZFiOSVersion.m
-//  ZFVersion
+//  AIiOSVersion.m
 
-#import "ZFiOSVersion.h"
+#import "AIiOSVersion.h"
 #import <CoreGraphics/CoreGraphics.h>
 #import <UIKit/UIKit.h>
 #import <sys/utsname.h>
 
-@implementation ZFiOSVersion
+@implementation AIiOSVersion
 
 + (NSDictionary*)deviceNamesByCode
 {
@@ -125,22 +124,22 @@
     return deviceNamesByCode;
 }
 
-+ (ZFDeviceVersion)deviceVersion
++ (AIDeviceVersion)deviceVersion
 {
     struct utsname systemInfo;
     uname(&systemInfo);
     NSString *code = [NSString stringWithCString:systemInfo.machine encoding:NSUTF8StringEncoding];
     
-    ZFDeviceVersion version = (ZFDeviceVersion)[[self.deviceNamesByCode objectForKey:code] integerValue];
+    AIDeviceVersion version = (AIDeviceVersion)[[self.deviceNamesByCode objectForKey:code] integerValue];
     
     return version;
 }
 
-+ (ZFDeviceSize)resolutionSize
++ (AIDeviceSize)resolutionSize
 {
     CGFloat screenHeight = 0;
     
-    if ([ZFiOSVersion versionGreaterThanOrEqualTo:@"8"]) {
+    if ([AIiOSVersion versionGreaterThanOrEqualTo:@"8"]) {
         screenHeight = MAX([[UIScreen mainScreen] bounds].size.height, [[UIScreen mainScreen] bounds].size.width);
     } else {
         screenHeight = [[UIScreen mainScreen] bounds].size.height;
@@ -160,9 +159,9 @@
         return UnknownSize;
 }
 
-+ (ZFDeviceSize)deviceSize
++ (AIDeviceSize)deviceSize
 {
-    ZFDeviceSize deviceSize = [self resolutionSize];
+    AIDeviceSize deviceSize = [self resolutionSize];
     if ([self isZoomed]) {
         if (deviceSize == Screen4inch) {
             deviceSize = Screen4Dot7inch;
@@ -173,7 +172,7 @@
     return deviceSize;
 }
 
-+ (NSString *)deviceSizeName:(ZFDeviceSize)deviceSize
++ (NSString *)deviceSizeName:(AIDeviceSize)deviceSize
 {
     return @{
              @(UnknownSize)     : @"Unknown Size",
@@ -187,10 +186,15 @@
 
 + (NSString *)deviceNameString
 {
-    return [ZFiOSVersion deviceNameForVersion:[ZFiOSVersion deviceVersion]];
+    return [AIiOSVersion deviceNameForVersion:[AIiOSVersion deviceVersion]];
 }
 
-+ (NSString *)deviceNameForVersion:(ZFDeviceVersion)deviceVersion
++ (NSString *)deviceNameStringByTrimWhitespace
+{
+    return [[AIiOSVersion deviceNameForVersion:[AIiOSVersion deviceVersion]] stringByReplacingOccurrencesOfString:@" " withString:@""];
+}
+
++ (NSString *)deviceNameForVersion:(AIDeviceVersion)deviceVersion
 {
     if (deviceVersion == UnknownDevice) {
         struct utsname systemInfo;

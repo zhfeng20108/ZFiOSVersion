@@ -1,10 +1,9 @@
 //
-//  ZFiOSVersion.h
-//  ZFVersion
+//  AIiOSVersion.h
 
 #import <Foundation/Foundation.h>
 
-typedef NS_ENUM(NSInteger, ZFDeviceVersion){
+typedef NS_ENUM(NSInteger, AIDeviceVersion){
     UnknownDevice         = 0,
     Simulator             = 1,
 	
@@ -65,7 +64,7 @@ typedef NS_ENUM(NSInteger, ZFDeviceVersion){
 
 };
 
-typedef NS_ENUM(NSInteger, ZFDeviceSize){
+typedef NS_ENUM(NSInteger, AIDeviceSize){
     UnknownSize     = 0,
     Screen3Dot5inch = 1,
     Screen4inch     = 2,
@@ -74,14 +73,15 @@ typedef NS_ENUM(NSInteger, ZFDeviceSize){
     Screen5Dot8inch = 5
 };
 
-@interface ZFiOSVersion : NSObject
+@interface AIiOSVersion : NSObject
 
-+ (ZFDeviceVersion)deviceVersion;
-+ (NSString *)deviceNameForVersion:(ZFDeviceVersion)deviceVersion;
-+ (ZFDeviceSize)resolutionSize;
-+ (ZFDeviceSize)deviceSize;
-+ (NSString *)deviceSizeName:(ZFDeviceSize)deviceSize;
++ (AIDeviceVersion)deviceVersion;
++ (NSString *)deviceNameForVersion:(AIDeviceVersion)deviceVersion;
++ (AIDeviceSize)resolutionSize;
++ (AIDeviceSize)deviceSize;
++ (NSString *)deviceSizeName:(AIDeviceSize)deviceSize;
 + (NSString *)deviceNameString;
++ (NSString *)deviceNameStringByTrimWhitespace;
 + (BOOL)isZoomed;
 
 + (BOOL)versionEqualTo:(NSString *)version;
