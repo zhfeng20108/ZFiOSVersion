@@ -155,8 +155,10 @@
         return Screen5Dot5inch;
     } else if (screenHeight == 812) {
         return Screen5Dot8inch;
-    } else
-        return UnknownSize;
+    } else if (screenHeight == 896) {
+        return Screen6Dot1or5inch;
+    }  else
+        return Screen6Dot1or5inch;
 }
 
 + (AIDeviceSize)deviceSize
@@ -181,6 +183,7 @@
              @(Screen4Dot7inch) : @"4.7 inch",
              @(Screen5Dot5inch) : @"5.5 inch",
              @(Screen5Dot8inch) : @"5.8 inch",
+             @(Screen6Dot1or5inch) : @"6.1 or 6.5 inch",
              }[@(deviceSize)];
 }
 

@@ -70,7 +70,8 @@ typedef NS_ENUM(NSInteger, AIDeviceSize){
     Screen4inch     = 2,
     Screen4Dot7inch = 3,
     Screen5Dot5inch = 4,
-    Screen5Dot8inch = 5
+    Screen5Dot8inch = 5,
+    Screen6Dot1or5inch = 6
 };
 
 @interface AIiOSVersion : NSObject
