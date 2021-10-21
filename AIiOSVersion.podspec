@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "AIiOSVersion"
-  s.version      = "2.0.0"
+  s.version      = "2.0.3"
   s.summary      = "iPhone machine 即时更新"
 
   s.description  = <<-DESC
@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
 
   s.platform     = :ios, "8.0"
 
-  s.source       = { :git => "https://github.com/zhfeng20108/ZFiOSVersion.git", :tag => "2.0.0" }
+  s.source       = { :git => "https://github.com/zhfeng20108/ZFiOSVersion.git", :tag => "2.0.3" }
 
   s.source_files  = "AIiOSVersion/*.{h,m}"
 

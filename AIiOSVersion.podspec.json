@@ -1,6 +1,6 @@
 {
   "name": "AIiOSVersion",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "summary": "iPhone machine 即时更新",
   "description": "现有的更新不及时，这个及时更新",
   "homepage": "https://github.com/zhfeng20108/ZFiOSVersion",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/zhfeng20108/ZFiOSVersion.git",
-    "tag": "2.0.2"
+    "tag": "2.0.3"
   },
   "source_files": "AIiOSVersion/*.{h,m}",
   "requires_arc": true

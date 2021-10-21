@@ -61,6 +61,16 @@ typedef NS_ENUM(NSInteger, AIDeviceVersion){
     iPadAir3              = 50,
     
     iPodTouch7Gen         = 51,
+    
+    iPhoneSE2             = 52,
+    iPhone12mini          = 53,
+    iPhone12              = 54,
+    iPhone12Pro           = 55,
+    iPhone12ProMax        = 56,
+    iPhone13mini          = 57,
+    iPhone13              = 58,
+    iPhone13Pro           = 59,
+    iPhone13ProMax        = 60
 
 };
 

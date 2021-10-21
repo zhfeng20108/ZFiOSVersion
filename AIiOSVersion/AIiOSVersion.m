@@ -51,6 +51,16 @@
                               @"iPhone12,1" : @(iPhone11),
                               @"iPhone12,3" : @(iPhone11Pro),
                               @"iPhone12,5" : @(iPhone11ProMax),
+                              @"iPhone12,8" : @(iPhoneSE2),
+                              @"iPhone13,1" : @(iPhone12mini),
+                              @"iPhone13,2" : @(iPhone12),
+                              @"iPhone13,3" : @(iPhone12Pro),
+                              @"iPhone13,4" : @(iPhone12ProMax),
+                              @"iPhone14,4" : @(iPhone13mini),
+                              @"iPhone14,5" : @(iPhone13),
+                              @"iPhone14,2" : @(iPhone13Pro),
+                              @"iPhone14,3" : @(iPhone13ProMax),
+
                               @"i386"       : @(Simulator),
                               @"x86_64"     : @(Simulator),
                               
@@ -226,6 +236,16 @@
              @(iPhone11)             : @"iPhone 11",
              @(iPhone11Pro)          : @"iPhone 11 Pro",
              @(iPhone11ProMax)       : @"iPhone 11 Pro Max",
+             @(iPhoneSE2)            : @"iPhone SE 2",
+             @(iPhone12mini)         : @"iPhone 12 mini",
+             @(iPhone12)             : @"iPhone 12",
+             @(iPhone12Pro)          : @"iPhone 12 Pro",
+             @(iPhone12ProMax)       : @"iPhone 12 Pro Max",
+             @(iPhone13mini)         : @"iPhone 13 mini",
+             @(iPhone13)             : @"iPhone 13",
+             @(iPhone13Pro)          : @"iPhone 13 Pro",
+             @(iPhone13ProMax)       : @"iPhone 13 Pro Max",
+
              
              @(iPad1)                : @"iPad 1",
              @(iPad2)                : @"iPad 2",
